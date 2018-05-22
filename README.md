@@ -19,3 +19,7 @@ Exemplos de uso:
 - http://panizzon.ind.br/
 - https://codepen.io/willianjusten/full/ZYVPep
 - http://tutsplus.github.io/Styling-Iconic/styling/
+
+## Aula 05
+- Estudar quando se deve usar SVG
+- Uso indicado em imagens com poucos detalhes
