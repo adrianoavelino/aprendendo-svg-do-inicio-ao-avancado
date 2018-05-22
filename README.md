@@ -7,4 +7,8 @@
 
 ## Aula 02
   - História
-  
+
+## Aulla 03
+  - SVG - Scalable Vector Graphics
+  - Imagem vetorial no formato XML
+  - Suporta interatividade e animação
