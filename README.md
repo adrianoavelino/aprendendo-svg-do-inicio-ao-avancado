@@ -29,3 +29,21 @@ Exemplos de uso:
 - Sketch
 - Inkscape
 - Manualmente com editor de texto
+
+## Aula 07 - Onde baixar?
+- Shutterstock
+- Vecteezy
+- SVG Cuts
+- Icomoon
+- Iconmonstr
+- Material Design Icons
+- Iconic
+- Flaticon
+- Lista na Awesome SVG com mais links
+
+Patterns:
+- Plain Pattern
+- Trianglify
+- SVGeneration
+- Pattern bold
+- Gerstnerizer
