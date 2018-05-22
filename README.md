@@ -23,3 +23,9 @@ Exemplos de uso:
 ## Aula 05
 - Estudar quando se deve usar SVG
 - Uso indicado em imagens com poucos detalhes
+
+## Aula 06 - Como criar?
+- Illustrator
+- Sketch
+- Inkscape
+- Manualmente com editor de texto
