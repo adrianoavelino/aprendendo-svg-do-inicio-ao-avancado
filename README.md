@@ -84,3 +84,17 @@ Exemplo:
 </style>
 <i class="icon icon-music"></i>
 ```
+
+## Aula 10 - Como usar e suas vantagens/desvantagens? - Como iframe/object/embed
+- Bastante lento
+- Comportamentos diferentes dependendo do Browser
+- Sem permissão de muitas edições, por exemplo manipulação de cores devido a comportamentos diferentes em cada Browser
+
+Exemplo:
+```html
+<iframe src="img/alarm_clock.svg" frameborder="0"></iframe>
+
+<object data="img/alarm_clock.svg" type=""></object>
+
+<embed src="img/alarm_clock.svg" type="">
+```
