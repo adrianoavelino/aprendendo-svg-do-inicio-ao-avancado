@@ -47,3 +47,14 @@ Patterns:
 - SVGeneration
 - Pattern bold
 - Gerstnerizer
+
+## Aula 08 - Como usar e suas vantagens/desvantagens? - Como Imagem
+- Podem ser cacheadas
+- Sem interação de CSS
+- Sem edição no DOM
+- Animações só funcionam se estiverem dentro do SVG
+
+Exemplo:
+```html
+<img src="img/alarm_clock.svg" alt="Relógio">
+```
