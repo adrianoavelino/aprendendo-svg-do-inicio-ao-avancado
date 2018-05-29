@@ -58,3 +58,29 @@ Exemplo:
 ```html
 <img src="img/alarm_clock.svg" alt="Relógio">
 ```
+
+## Aula 09 - Como usar e suas vantagens/desvantagens? - Como background-image
+- Podem ser cacheadas
+- Sem interação de CSS
+- Sem edição no DOM
+- Animações só funcionam se estiverem dentro do SVG
+
+Exemplo:
+```html
+<style>
+.icon {
+  display: inline-block;
+  width: 500px;
+  height: 500px;
+}
+
+.icon-music {
+  background-image: url(img/audio_file.svg);
+}
+
+.icon-clock {
+  background-image: url(img/alarm_clock.svg);
+}
+</style>
+<i class="icon icon-music"></i>
+```
