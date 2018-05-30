@@ -147,3 +147,5 @@ Exemplo:
     </g>
 </svg>
 ```
+## Aula 13 - A estrutura do SVG - Plano Cartesiano
+Informações sobre o eixo `X` e `Ỳ` do plano cartesiano
