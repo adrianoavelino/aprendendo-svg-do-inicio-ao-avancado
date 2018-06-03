@@ -149,3 +149,18 @@ Exemplo:
 ```
 ## Aula 13 - A estrutura do SVG - Plano Cartesiano
 Informações sobre o eixo `X` e `Ỳ` do plano cartesiano
+
+## Aula 14 - A estrutura do SVG - Viewport e ViewBox
+- São propriedades do SVG
+- Viewport é o espaço onde vai ocupar o desenho do SVG
+- ViewBox é o espaço dentro do Viewport que deverá ser usado. É como se ela desse um zoom in ou zoom out dentro do Viewport
+
+O viewBox possui quatro valores numéricos que podem ser separadas por espaço ou virgula.
+```html
+viewBox = <min-x> <min-y> <width> <height>
+```
+São eles:
+- min-X: distância mínima do eixo X
+- min-Y: distância mínima do eixo Y
+- width: é a largura do ViewBox dentro da Viewport
+- height: é a altura do ViewBox dentro da Viewport
