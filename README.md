@@ -164,3 +164,33 @@ São eles:
 - min-Y: distância mínima do eixo Y
 - width: é a largura do ViewBox dentro da Viewport
 - height: é a altura do ViewBox dentro da Viewport
+
+## Aula 15 - A estrutura do SVG - preserveAspectRatio
+- `preserveAspectRatio="none"`: não mantém a proporção
+- `<align> [<meetOrSlice>]`:
+
+  Onde `<align>` pode rrerceber os valores:
+  - xMinYMin
+  - xMidYMin
+  - xMaxYMin
+  - xMinYMid
+  - xMidYMid
+  - xMaxYMid
+  - xMinYMax
+  - xMidYMax
+  - xMaxYMax
+
+  E `<meetOrSlice>` pode receber:
+  - meet: cobre o máximo que couber sem distorção
+  - slice: ocupa o máximo que puder e recorta o restante
+
+
+  Exemplo:
+  ```html
+  <svg
+      width="400" height="1000"
+      viewBox="0 0 230 218"
+      preserveAspectRatio="xMaxYMax slice">
+<!-- conteúdo do svg -->
+  </svg>
+  ```
