@@ -194,3 +194,59 @@ São eles:
 <!-- conteúdo do svg -->
   </svg>
   ```
+
+## Aula 16 - A estrutura do SVG - Formas Básicas
+
+- Rect
+```html
+<svg>
+    <rect x="50" y="20" width="100" height="100"/>
+</svg>
+```
+
+- Circle
+```html
+<svg>
+    <circle r="25" cx="150" cy="70" />
+</svg>
+```
+
+- Ellipse
+```html
+<svg>
+    <ellipse rx="100" ry="50" cx="150" cy="75" />
+</svg>
+```
+
+- Line
+```html
+<svg>
+    <line x1="10" y1="10" x2="100" y2="120" stroke="#000" stroke-width="4"/>
+</svg>
+```
+
+- Polyline
+```html
+<svg>
+    <polyline points="0,40 40,40 40,80 80,80 80,120 120,120, 120,160" fill="transparent" stroke="#000" stroke-width="4"/>
+</svg>
+```
+
+- Polygon
+```html
+<svg>
+    <polygon points="50,5 100,5 125,30 125,80 100,105 50,105 25,80 25,30" fill="#000" stroke="red" stroke-width="4"/>
+</svg>
+```
+
+- Path
+```html
+<svg>
+    <path
+        stroke="#000"
+        stroke-width="4"
+        fill="none"
+        d="M40,20 L40,80 A30,30 0 1,0 100,100z"
+    />
+</svg>
+```
