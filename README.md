@@ -240,6 +240,13 @@ São eles:
 ```
 
 - Path
+
+    Valores da propriedade `d`:
+    - __M / Moveto__: ponto inicial da curva
+    - __L / Lineto__: onde o ponto final vai chegar
+    - __A / Arcs__: cria a curva, onde o primeiro valor é A`raio do eixo de x`, `raio do eixo de y` `parâmetro de rotacionamento (normalmente 0)` `concavo/convexo Ex: 0,1` `eixo x`, `eixo y`
+    - __z / Closepath__: elemento de fechamento
+
 ```html
 <svg>
     <path
