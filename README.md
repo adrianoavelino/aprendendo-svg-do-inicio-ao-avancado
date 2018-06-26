@@ -238,6 +238,7 @@ São eles:
     <polygon points="50,5 100,5 125,30 125,80 100,105 50,105 25,80 25,30" fill="#000" stroke="red" stroke-width="4"/>
 </svg>
 ```
+
 ## Aula 17 - A estrutura do SVG - O elemento Path
 
   - Path
@@ -256,5 +257,44 @@ São eles:
               fill="none"
               d="M40,20 L40,80 A30,30 0 1,0 100,100z"
           />
+      </svg>
+      ```
+
+## Aula 18 - A estrutura do SVG - Elementos Containers
+  - `<defs>` é um container que possui itens com o intuito de reuso
+  - `<g>` é um container responsável por agrupar elementos similares
+  - `<symbol>` define um objecto que será instaciado pelo `<use>` e possui viewBox própria
+
+    Exemplos:
+    - Defs
+      ```xml
+      <svg>
+          <defs>
+              <circle id="meu-circulo" r="25" cx="150" cy="50"/>
+          </defs>
+
+          <use xlink:href="#meu-circulo" />
+          <use xlink:href="#meu-circulo" x="80" fill="red"/>
+      </svg>
+    ```
+
+    - g
+      ```xml
+      <svg>
+          <g fill="red">
+              <circle id="meu-circulo" r="25" cx="150" cy="50"/>
+              <circle id="meu-circulo" r="25" cx="240" cy="50"/>
+          </g>
+      </svg>
+      ```
+    - Symbol
+      ```xml
+      <svg>
+          <symbol id="meu-simbolo" viewBox="0 0 150 75">
+              <circle r="25" cx="150" cy="50"/>
+          </symbol>
+
+          <use xlink:href="#meu-simbolo" />
+          <use xlink:href="#meu-simbolo" x="80" fill="red"/>
       </svg>
       ```
