@@ -298,3 +298,24 @@ São eles:
           <use xlink:href="#meu-simbolo" x="80" fill="red"/>
       </svg>
       ```
+
+## Aula 19 - Estilizando o SVG - Métodos para estililzar pt1
+  #### Propriedades de estilo:
+  - ***Compartilhado com o CSS***: font, font-size, font-style, font-weight, text-decoration, visibility, color, cursor, display entre outras.
+
+  - ***Exclusivo do SVG***: fill, fill-opacity, stroke, stroke-opacity entre outras
+
+
+  #### Peso das Propriedades
+
+  Assim como no CSS um estilo pode sobrescrever o outro como no uso de `!important` ou adição de classes em uma TAG, o mesmo ocorre no SVG.
+
+  Ordem dos pesos:
+  - User agent: estilos do browser
+  - Presentation Attributes: são os atributos colocados diretos na TAG como o width ou height
+  - External style: são os estilos externos chamados por link
+  - Document styles: são estilos usados dentro dos arquivos HTML na TAG `<style>`
+  - Inline styles: são os estilos criados dentro da TAG
+  - Animation
+  - Override styles: como exemplo temos o `!important`
+  - Computed styles:
