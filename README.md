@@ -249,73 +249,13 @@ São eles:
     - __A / Arcs__: cria a curva, onde o primeiro valor é A`raio do eixo de x`, `raio do eixo de y` `parâmetro de rotacionamento (normalmente 0)` `concavo/convexo Ex: 0,1` `eixo x`, `eixo y`
     - __z / Closepath__: elemento de fechamento
 
-      ```html
-      <svg>
-          <path
-              stroke="#000"
-              stroke-width="4"
-              fill="none"
-              d="M40,20 L40,80 A30,30 0 1,0 100,100z"
-          />
-      </svg>
-      ```
-
-## Aula 18 - A estrutura do SVG - Elementos Containers
-  - `<defs>` é um container que possui itens com o intuito de reuso
-  - `<g>` é um container responsável por agrupar elementos similares
-  - `<symbol>` define um objecto que será instaciado pelo `<use>` e possui viewBox própria
-
-    Exemplos:
-    - Defs
-      ```xml
-      <svg>
-          <defs>
-              <circle id="meu-circulo" r="25" cx="150" cy="50"/>
-          </defs>
-
-          <use xlink:href="#meu-circulo" />
-          <use xlink:href="#meu-circulo" x="80" fill="red"/>
-      </svg>
-    ```
-
-    - g
-      ```xml
-      <svg>
-          <g fill="red">
-              <circle id="meu-circulo" r="25" cx="150" cy="50"/>
-              <circle id="meu-circulo" r="25" cx="240" cy="50"/>
-          </g>
-      </svg>
-      ```
-    - Symbol
-      ```xml
-      <svg>
-          <symbol id="meu-simbolo" viewBox="0 0 150 75">
-              <circle r="25" cx="150" cy="50"/>
-          </symbol>
-
-          <use xlink:href="#meu-simbolo" />
-          <use xlink:href="#meu-simbolo" x="80" fill="red"/>
-      </svg>
-      ```
-
-## Aula 19 - Estilizando o SVG - Métodos para estililzar pt1
-  #### Propriedades de estilo:
-  - ***Compartilhado com o CSS***: font, font-size, font-style, font-weight, text-decoration, visibility, color, cursor, display entre outras.
-
-  - ***Exclusivo do SVG***: fill, fill-opacity, stroke, stroke-opacity entre outras
-
-
-  #### Peso das Propriedades
-
-  Assim como no CSS um estilo pode sobrescrever o outro como no uso de `!important` ou adição de classes em uma TAG, o mesmo ocorre no SVG.
-
-  Ordem dos pesos:
-  - User agent: estilos do browser
-  - Presentation Attributes: são os atributos colocados diretos na TAG como o width ou height
-  - External style: são os estilos externos chamados por link
-  - Document styles: são estilos usados dentro dos arquivos HTML na TAG `<style>`
-  - Inline styles: são os estilos criados dentro da TAG
-  - Animation
-  - Override styles: como exemplo temos o `!important`
-  - Computed styles:
+```html
+<svg>
+    <path
+        stroke="#000"
+        stroke-width="4"
+        fill="none"
+        d="M40,20 L40,80 A30,30 0 1,0 100,100z"
+    />
+</svg>
+```
