@@ -241,7 +241,11 @@ São eles:
 
 ## Aula 17 - A estrutura do SVG - O elemento Path
 
+<<<<<<< HEAD
 - Path
+=======
+  - Path
+>>>>>>> ebb1383c8913b790bd81c496eb136b7a82beda18
 
     Valores da propriedade `d`:
     - __M / Moveto__: ponto inicial da curva
@@ -249,6 +253,7 @@ São eles:
     - __A / Arcs__: cria a curva, onde o primeiro valor é A`raio do eixo de x`, `raio do eixo de y` `parâmetro de rotacionamento (normalmente 0)` `concavo/convexo Ex: 0,1` `eixo x`, `eixo y`
     - __z / Closepath__: elemento de fechamento
 
+<<<<<<< HEAD
       ```html
       <svg>
           <path
@@ -259,3 +264,15 @@ São eles:
           />
       </svg>
       ```
+=======
+```html
+<svg>
+    <path
+        stroke="#000"
+        stroke-width="4"
+        fill="none"
+        d="M40,20 L40,80 A30,30 0 1,0 100,100z"
+    />
+</svg>
+```
+>>>>>>> ebb1383c8913b790bd81c496eb136b7a82beda18
