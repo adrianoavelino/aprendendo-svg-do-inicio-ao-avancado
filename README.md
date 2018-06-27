@@ -241,11 +241,7 @@ São eles:
 
 ## Aula 17 - A estrutura do SVG - O elemento Path
 
-<<<<<<< HEAD
-- Path
-=======
   - Path
->>>>>>> ebb1383c8913b790bd81c496eb136b7a82beda18
 
     Valores da propriedade `d`:
     - __M / Moveto__: ponto inicial da curva
@@ -253,18 +249,6 @@ São eles:
     - __A / Arcs__: cria a curva, onde o primeiro valor é A`raio do eixo de x`, `raio do eixo de y` `parâmetro de rotacionamento (normalmente 0)` `concavo/convexo Ex: 0,1` `eixo x`, `eixo y`
     - __z / Closepath__: elemento de fechamento
 
-<<<<<<< HEAD
-      ```html
-      <svg>
-          <path
-              stroke="#000"
-              stroke-width="4"
-              fill="none"
-              d="M40,20 L40,80 A30,30 0 1,0 100,100z"
-          />
-      </svg>
-      ```
-=======
 ```html
 <svg>
     <path
@@ -275,4 +259,43 @@ São eles:
     />
 </svg>
 ```
->>>>>>> ebb1383c8913b790bd81c496eb136b7a82beda18
+
+
+## Aula 18 - A estrutura do SVG - Elementos Containers
+  - `<defs>` é um container que possui itens com o intuito de reuso
+  - `<g>` é um container responsável por agrupar elementos similares
+  - `<symbol>` define um objecto que será instaciado pelo `<use>` e possui viewBox própria
+
+    Exemplos:
+    - Defs
+      ```xml
+      <svg>
+          <defs>
+              <circle id="meu-circulo" r="25" cx="150" cy="50"/>
+          </defs>
+
+          <use xlink:href="#meu-circulo" />
+          <use xlink:href="#meu-circulo" x="80" fill="red"/>
+      </svg>
+    ```
+
+    - g
+      ```xml
+      <svg>
+          <g fill="red">
+              <circle id="meu-circulo" r="25" cx="150" cy="50"/>
+              <circle id="meu-circulo" r="25" cx="240" cy="50"/>
+          </g>
+      </svg>
+      ```
+    - Symbol
+      ```xml
+      <svg>
+          <symbol id="meu-simbolo" viewBox="0 0 150 75">
+              <circle r="25" cx="150" cy="50"/>
+          </symbol>
+
+          <use xlink:href="#meu-simbolo" />
+          <use xlink:href="#meu-simbolo" x="80" fill="red"/>
+      </svg>
+      ```
