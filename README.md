@@ -239,14 +239,23 @@ São eles:
 </svg>
 ```
 
+## Aula 17 - A estrutura do SVG - O elemento Path
+
 - Path
-```html
-<svg>
-    <path
-        stroke="#000"
-        stroke-width="4"
-        fill="none"
-        d="M40,20 L40,80 A30,30 0 1,0 100,100z"
-    />
-</svg>
-```
+
+    Valores da propriedade `d`:
+    - __M / Moveto__: ponto inicial da curva
+    - __L / Lineto__: onde o ponto final vai chegar
+    - __A / Arcs__: cria a curva, onde o primeiro valor é A`raio do eixo de x`, `raio do eixo de y` `parâmetro de rotacionamento (normalmente 0)` `concavo/convexo Ex: 0,1` `eixo x`, `eixo y`
+    - __z / Closepath__: elemento de fechamento
+
+      ```html
+      <svg>
+          <path
+              stroke="#000"
+              stroke-width="4"
+              fill="none"
+              d="M40,20 L40,80 A30,30 0 1,0 100,100z"
+          />
+      </svg>
+      ```
