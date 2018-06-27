@@ -320,3 +320,51 @@ São eles:
   - Animation
   - Override styles: como exemplo temos o `!important`
   - Computed styles:
+
+## Aula 20 - Estilizando o SVG - Métodos para estililzar pt2
+
+
+### Estilo inline
+```xml
+<svg style="width: 300px; height:300px;" viewBox="0 0 300 300">
+    <polygon
+    style="fill: blue; stroke: #ED1C24; stroke-width: 5;"
+    points = "279.1,160.8 195.2,193.3 174.4,280.8   117.6,211.1 27.9,218.3 76.7,142.7 42.1,59.6 129.1,82.7 197.4,24.1 202.3,114 "/>
+</svg>
+```
+
+### Estilo dentro do SVG
+```xml
+<svg width="300" height="300" viewBox="0 0 300 300">
+    <style>
+        polygon {
+            fill: yellow;
+            stroke: #ED1C24;
+            stroke-width: 5;
+        }
+    </style>
+    <polygon points = "279.1,160.8 195.2,193.3 174.4,280.8   117.6,211.1 27.9,218.3 76.7,142.7 42.1,59.6 129.1,82.7 197.4,24.1 202.3,114 "/>
+</svg>
+```
+### Estilo fora do SVG
+```xml
+<style>
+    .star {
+        fill: green;
+        stroke: #ED1C24;
+        stroke-width: 5;
+    }
+</style>
+
+<svg width="300" height="300" viewBox="0 0 300 300">
+    <polygon class="star" points = "279.1,160.8 195.2,193.3 174.4,280.8   117.6,211.1 27.9,218.3 76.7,142.7 42.1,59.6 129.1,82.7 197.4,24.1 202.3,114 "/>
+</svg>
+```
+
+### Estilo externo
+```xml
+<?xml-stylesheet type="text/css" href="css/main.css"?>
+<svg width="300" height="300" viewBox="0 0 300 300">
+    <polygon id="star-external" points = "279.1,160.8 195.2,193.3 174.4,280.8   117.6,211.1 27.9,218.3 76.7,142.7 42.1,59.6 129.1,82.7 197.4,24.1 202.3,114 "/>
+</svg>
+```
