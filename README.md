@@ -397,3 +397,15 @@ Exemplo:
 </html>
 ```
 [Exemplo online](https://willianjusten.com.br/curso-de-svg/estilizando-svg-css/peso-propriedades.html)
+
+## Aula 22 - Estilizando o SVG - Fill e stroke
+
+- __fill__: é o responsável pelo preenchimento do desenhos no SVG
+- __fill-opacity__: ele dá opacidade aquele elemento
+- __stroke__: é o responsável por fazer o contorno do desenho
+- __stroke-width__: é o responsável por aumentar a largura do stroke
+- __stroke-dasharray__: transforma o stroke em diversos tracinhos, onde o primeiro valor define o tamanho do tracinho e o segundo o espaço entre os tracinhos (Ex: `stroke-dasharray: 10 5`). Por padrão se a propriedade receber somente um valor ela assume o mesmo valor para  tracinho e o espaço (Ex: `stroke-dasharray: 10`).
+- __stroke-dashoffset__: é o responsável sumir com os arrays do `stroke-dasharray`
+
+
+Através das propriedades  `stroke-dasharray` e `stroke-dashoffset` é possivel criar aquele efeito de estar desenhando alguma coisa na tela. Utillize o [exemplo online](https://willianjusten.com.br/curso-de-svg/estilizando-svg-css/fill-stroke.html) com o developertool alterando os valores para simular o efeito.
