@@ -409,3 +409,68 @@ Exemplo:
 
 
 Através das propriedades  `stroke-dasharray` e `stroke-dashoffset` é possivel criar aquele efeito de estar desenhando alguma coisa na tela. Utillize o [exemplo online](https://willianjusten.com.br/curso-de-svg/estilizando-svg-css/fill-stroke.html) com o developertool alterando os valores para simular o efeito.
+
+## Aula 23 - Estilizando o SVG - Colorindo ícones com mais de uma cor
+- através do valor `currentColor` do CSS utilizado na propriedade `fill` é possivel pegar a cor do pai e passar para o `fill`. Quando o `fill` não está definido a cor padrão é preto.
+```xml
+<path fill="currentColor" d="M24,3C14.6,3,7,10.6,7,20c0,1.2,0,3.4,0,3.4L9,25v-3l21-9.8l9,9.8v3l2-1.6c0,0,0-2.1,0-3.4 C41,12,35.3,3,24,3z"/>
+```
+- para alterar a cor do fill com o valor `currentColor` deve-se adicionar uma classe ao SVG e dentro da classe CSS deve-se utilizar a propriedade `color`
+
+- para alterar um outro elemento SVG, como um grupo (g), deve-se remover a propriedade `fill` do elemento do SVG e adicionar a propriedade fill numa classe CSS. Dessa forma mantém-se a cor do `currentColor`, somente sobrescreve-se os elementos sem a propriedade fill e com a classe CSS.
+
+Exemplos:
+```html
+<svg width="320" height="320" class="hidden">
+    <symbol id="icon-assistant" viewBox="0 0 48 48">
+        <g fill="#FFA726">
+            <circle cx="10" cy="26" r="4"/>
+            <circle cx="38" cy="26" r="4"/>
+        </g>
+        <path fill="#FFB74D" d="M39,19c0-12.7-30-8.3-30,0c0,1.8,0,8.2,0,10c0,8.3,6.7,15,15,15s15-6.7,15-15C39,27.2,39,20.8,39,19z"/>
+        <path fill="currentColor" d="M24,3C14.6,3,7,10.6,7,20c0,1.2,0,3.4,0,3.4L9,25v-3l21-9.8l9,9.8v3l2-1.6c0,0,0-2.1,0-3.4 C41,12,35.3,3,24,3z"/>
+        <g>
+            <circle cx="31" cy="26" r="2"/>
+            <circle cx="17" cy="26" r="2"/>
+        </g>
+        <path fill="#757575" d="M43,24c-0.6,0-1,0.4-1,1v-7c0-8.8-7.2-16-16-16h-7c-0.6,0-1,0.4-1,1s0.4,1,1,1h7c7.7,0,14,6.3,14,14v10 c0,0.6,0.4,1,1,1s1-0.4,1-1v2c0,3.9-3.1,7-7,7H24c-0.6,0-1,0.4-1,1s0.4,1,1,1h11c5,0,9-4,9-9v-5C44,24.4,43.6,24,43,24z"/>
+        <g fill="var(--primary-color)">
+            <path d="M43,22h-1c-1.1,0-2,0.9-2,2v4c0,1.1,0.9,2,2,2h1c1.1,0,2-0.9,2-2v-4C45,22.9,44.1,22,43,22z"/>
+            <circle cx="24" cy="38" r="2"/>
+        </g>
+    </symbol>
+</svg>
+
+<style>
+    .small {
+        width: 100px;
+        height: 100px;
+        color: red;
+        fill: blue;
+        --primary-color: black;
+    }
+
+    .blue-hair {
+        color: blue;
+        fill: green;
+        transition: color .8s;
+        --primary-color: red;
+    }
+
+    .blue-hair:hover {
+        color: red;
+    }
+</style>
+
+<svg class="blue-hair">
+    <use xlink:href="#icon-assistant" />
+</svg>
+
+<svg class="small">
+    <use xlink:href="#icon-assistant" />
+</svg>
+
+<svg class="small blue-hair">
+    <use xlink:href="#icon-assistant" />
+</svg>
+```
