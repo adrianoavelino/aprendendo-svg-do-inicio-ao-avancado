@@ -474,3 +474,16 @@ Exemplos:
     <use xlink:href="#icon-assistant" />
 </svg>
 ```
+
+## Aula 24 - Construindo um SVG responsivo e adaptativo - Tornando o SVG fluído
+
+- baixe o seu SVG . Por exemplo no site [Brands of the World](http://www.brandsoftheworld.com)
+- otimize no seu editor preferido: agrupando e dividindo em layers
+- algumas opoções a serem observadas ao salvar como:
+    - SVG profile: SVG 1.1
+    - fonts: SVG
+    - subsetting: normalmente
+    - CSS Properties: Presentation Attributes
+    - Decimal places: 1 para SVGs simples e 3 ara complexos
+- deixar o SVG responsivo retirando as propriedades width e o height
+- para funcionar no IE9 deve-se adicionar a propriedade `preserveAspectRatio="xMidYMid meet"`
