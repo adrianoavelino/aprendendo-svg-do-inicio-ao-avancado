@@ -487,3 +487,51 @@ Exemplos:
     - Decimal places: 1 para SVGs simples e 3 ara complexos
 - deixar o SVG responsivo retirando as propriedades width e o height
 - para funcionar no IE9 deve-se adicionar a propriedade `preserveAspectRatio="xMidYMid meet"`
+
+## Aula 25 - Construindo um SVG responsivo e adaptativo - Tornando o SVG responsivo e adaptativo
+
+- definir breakpoints (Ex: 1024, 768 e 480)
+- utilizar mediaquery no CSS
+- adicionar aniamações CSS
+
+```css
+<style>
+    body {
+        background: #240701;
+    }
+    .container {
+        max-width: 700px;
+        margin: auto;
+        height: 0;
+        padding-top: 48%;
+        position: relative;
+    }
+    .svg-responsive {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    #detalhe-externo,
+    #circulo-verde,
+    #textos {
+        transition: opacity .4s ease-in-out;
+    }
+    #inner-artwork {
+        transition: fill .4s ease-in-out;
+    }
+    @media(max-width: 768px) {
+        #detalhe-externo {
+            opacity: 0;
+        }
+    }
+    @media (max-width: 480px) {
+        #circulo-verde,
+        #textos {
+            opacity: 0
+        }
+        #inner-artwork {
+            fill: #067655;
+        }
+    }
+</style>
+```

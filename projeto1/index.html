@@ -7,6 +7,45 @@
   <title>Projeto 1</title>
 </head>
 <body>
+  <style>
+      body {
+          background: #240701;
+      }
+      .container {
+          max-width: 700px;
+          margin: auto;
+          height: 0;
+          padding-top: 48%;
+          position: relative;
+      }
+      .svg-responsive {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      #detalhe-externo,
+      #circulo-verde,
+      #textos {
+          transition: opacity .4s ease-in-out;
+      }
+      #inner-artwork {
+          transition: fill .4s ease-in-out;
+      }
+      @media(max-width: 768px) {
+          #detalhe-externo {
+              opacity: 0;
+          }
+      }
+      @media (max-width: 480px) {
+          #circulo-verde,
+          #textos {
+              opacity: 0
+          }
+          #inner-artwork {
+              fill: #067655;
+          }
+      }
+  </style>
   <svg viewBox="0 0 612 792" preserveAspectRatio="xMidYMid meet" >
     <g id="detalhe-externo">
      <path id="green_b" fill="#067655" d="M4.9,396C4.9,229.5,139.5,94.9,306,94.9S607.1,229.8,607.1,396
@@ -67,7 +106,7 @@
     <g id="logo">
      <path id="inner" fill="#FFFFFF" d="M131.3,394.8c0-96.1,78-174.1,174.1-174.1c96.1,0,174.1,78,174.1,174.1
       c0,96.1-78,174.1-174.1,174.1C209.3,568.9,131.3,490.9,131.3,394.8"/>
-     <path id="inner_artwork" fill="#010101" d="M304.5,289.8c5.8,3.4,11.9,7.6,16.5,12.2l-1.8,1.8c-9.2-0.9-19,0.3-27.5,0.3
+     <path id="inner-artwork" fill="#010101" d="M304.5,289.8c5.8,3.4,11.9,7.6,16.5,12.2l-1.8,1.8c-9.2-0.9-19,0.3-27.5,0.3
       c-0.9-0.9-3.1-2.4-1.2-3.7L304.5,289.8z M467,403.7c0,4.3,0.6,7.6-1.2,11.9c-16.8,4.9-27.8-12.9-44.1-10.4l1.8,9.2
       c15,0.6,24.5,15,40.1,14.4c-2.1,4.3,0.9,15.9-8.9,11.3c-10.1-2.4-17.4-11.3-28.8-11.3c-1.2,2.4-0.6,5.8-0.6,8.9
       c11.6,1.8,20.2,11.6,31.8,13.5c-1.2,4-2.1,8.6-5.5,11c-9.5-2.4-17.1-11-27.2-10.7l-1.8,8.6c9.8,0.3,15.9,8.9,24.5,11.3
