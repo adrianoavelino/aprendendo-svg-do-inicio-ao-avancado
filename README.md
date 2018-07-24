@@ -591,3 +591,8 @@ Exemplos:
   <use xlink:href="symbols.svg#icon-automatic" />
 </svg>
 ```
+
+## Aula 27 - Sistema de ícones em SVG - Usando o Icomoon
+- acesse o site https://icomoon.io/app/
+- importe os arquivos SVG
+- clique em ***Generate SVG or more***
